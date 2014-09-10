@@ -33,7 +33,7 @@ public class TouchInput : MonoBehaviour {
 						recipient.SendMessage("OnTouchStay", hit.point, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Moved:
-						recipient.SendMessage("OnTouchStay", hit.point, SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage("OnTouchMove", hit.point, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Canceled:
 						recipient.SendMessage("OnTouchExit", hit.point, SendMessageOptions.DontRequireReceiver);
