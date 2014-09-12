@@ -4,67 +4,60 @@ using System.Collections.Generic;
 
 public class leftButton : TouchInput {
 
-
-	//private Vector3 onTouchDownHitPoint;
-	//private Vector3 onTouchUpHitPoint;
-	//private Vector3 onTouchStayHitPoint;
-
-	//private List<Vector3> onTouchMoveHitPoints;
-
-	public GUIText text;
 	public GUIText textScreenSpecs;
-	public GUIText textTouchHitPoint;
+
+	public GUIText textCurrentPoint;
+	public GUIText textPointDown;
+	public GUIText textPointUp;
+
+	public GUIText textSpeed;
 
 	private float speed;
 
 	void Awake(){
-		text.text = "Speed: ";
+		textCurrentPoint.text = "Current (x,y)";
+		textPointDown.text = "Down (x,y)";
+		textPointUp.text = "Up (x,y)";
+
+		textSpeed.text = "Speed:";
 		textScreenSpecs.text = "Screen Height: " + Screen.height + "   Screen Width: " + Screen.width;
-		textTouchHitPoint.text = "(x,y)";
 	}
 
 	void OnTouchDown(Vector2 hitPoint){
-		//onTouchDownHitPoint = hitPoint;	
-
 		speed = (hitPoint.y / Screen.height);
-
-		text.text = "Speed: " + speed;
-		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
+		textSpeed.text = "Speed: " + speed;
+		textPointDown.text = "Down (" + hitPoint.x + "," + hitPoint.y + ")";
 
 	} // end of OnTouchDown
 
 
 
 	void OnTouchUp(Vector2 hitPoint){
-		//onTouchUpHitPoint = hitPoint;
 		speed = 0f;
-		text.text = "Speed: " + speed;
-		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
+		textSpeed.text = "Speed: " + speed;
+		textPointUp.text = "Up (" + hitPoint.x + "," + hitPoint.y + ")";
 	} // end of OnTouchUp
 
 
 
 	void OnTouchStay(Vector2 hitPoint){
-		//onTouchStayHitPoint = hitPoint;
 		speed = (hitPoint.y / Screen.height);
-		text.text = "Speed: " + speed;
-		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
+		textSpeed.text = "Speed: " + speed;
+		textCurrentPoint.text = "Current (" + hitPoint.x + "," + hitPoint.y + ")";
 	} // end of OnToucStay
 
 
 
 	void OnTouchMove(Vector2 hitPoint){
-		//onTouchMoveHitPoints.Add (hitPoint);
 		speed = (hitPoint.y / Screen.height);
-		text.text = "Speed: " + speed;
-		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
+		textSpeed.text = "Speed: " + speed;
+		textCurrentPoint.text = "Current (" + hitPoint.x + "," + hitPoint.y + ")";
 
 	} // end of OnTouchMove
 
 
 
 	void OnTouchExit(Vector2 hitPoint){
-		//Debug.Log ("Touch canceled!!!");
 	} // end of OnTouchExit
 
 
