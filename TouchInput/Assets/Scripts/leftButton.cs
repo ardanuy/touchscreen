@@ -37,6 +37,7 @@ public class leftButton : TouchInput {
 
 	void OnTouchUp(Vector2 hitPoint){
 		//onTouchUpHitPoint = hitPoint;
+		speed = 0f;
 		text.text = "Speed: " + speed;
 		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
 	} // end of OnTouchUp
@@ -45,6 +46,7 @@ public class leftButton : TouchInput {
 
 	void OnTouchStay(Vector2 hitPoint){
 		//onTouchStayHitPoint = hitPoint;
+		speed = (hitPoint.y / Screen.height);
 		text.text = "Speed: " + speed;
 		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
 	} // end of OnToucStay
@@ -53,7 +55,7 @@ public class leftButton : TouchInput {
 
 	void OnTouchMove(Vector2 hitPoint){
 		//onTouchMoveHitPoints.Add (hitPoint);
-
+		speed = (hitPoint.y / Screen.height);
 		text.text = "Speed: " + speed;
 		textTouchHitPoint.text = "(" + hitPoint.x + "," + hitPoint.y + ")";
 
