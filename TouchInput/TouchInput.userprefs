@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gesture.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RightControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gesture.cs" Line="6" Column="3" />
-      <File FileName="Assets\Scripts\rightButton.cs" Line="76" Column="3" />
+      <File FileName="Assets\Scripts\RightControl.cs" Line="18" Column="27" />
+      <File FileName="Assets\Scripts\LeftControl.cs" Line="92" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
