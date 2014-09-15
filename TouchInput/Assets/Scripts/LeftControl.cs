@@ -77,6 +77,8 @@ public class LeftControl : TouchInput {
 	 * 
 	 */
 	void OnTouchExit(Vector2 hitPoint){
+		pointDown = new Vector2 (0, 0);
+		pointUp = new Vector2 (0, 0);
 	} // end of OnTouchExit
 	
 
