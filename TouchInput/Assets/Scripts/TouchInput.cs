@@ -10,32 +10,26 @@ public class TouchInput : MonoBehaviour {
 
 		if(Input.touchCount > 0){
 
-
 			foreach (Touch touch in Input.touches){
 
-				//Ray ray = camera.ScreenPointToRay(touch.position);
-				//RaycastHit hit;
-
-				//if(Physics.Raycast(ray, out hit, touchInputMask)){
 				if(this.guiTexture.HitTest(touch.position)){
-					//GameObject recipient = hit.transform.gameObject;
 
 					switch(touch.phase){
 
 					case TouchPhase.Began:
-						this.SendMessage("OnTouchDown", touch.position, SendMessageOptions.DontRequireReceiver);
+						this.SendMessage("OnTouchDown", touch, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Ended:
-						this.SendMessage("OnTouchUp", touch.position, SendMessageOptions.DontRequireReceiver);
+						this.SendMessage("OnTouchUp", touch, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Stationary:
-						this.SendMessage("OnTouchStay", touch.position, SendMessageOptions.DontRequireReceiver);
+						this.SendMessage("OnTouchStay", touch, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Moved:
-						this.SendMessage("OnTouchMove", touch.position, SendMessageOptions.DontRequireReceiver);
+						this.SendMessage("OnTouchMove", touch, SendMessageOptions.DontRequireReceiver);
 						break;
 					case TouchPhase.Canceled:
-						this.SendMessage("OnTouchExit", touch.position, SendMessageOptions.DontRequireReceiver);
+						this.SendMessage("OnTouchExit", touch, SendMessageOptions.DontRequireReceiver);
 						break;
 					default:
 						break;
