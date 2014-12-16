@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RightControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DinamicResize.cs">
     <Files>
-      <File FileName="Assets\Scripts\RightControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TouchInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LeftControl.cs" Line="81" Column="32" />
+      <File FileName="Assets\Scripts\DinamicResize.cs" Line="28" Column="2" />
+      <File FileName="Assets\Scripts\TouchInputControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
